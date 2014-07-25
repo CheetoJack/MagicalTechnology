@@ -6,6 +6,7 @@ package com.cheetojack.MagicalTechnology;
 import com.cheetojack.MagicalTechnology.handler.ConfigurationHandler;
 import com.cheetojack.MagicalTechnology.proxy.IProxy;
 import com.cheetojack.MagicalTechnology.reference.Reference;
+import com.cheetojack.MagicalTechnology.utility.LogHelper;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -24,15 +25,19 @@ public class MagicalTechnology {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event){ //Pre-initialization, used for configs
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+
+        LogHelper.info(("Pre-initialization Complete!"));
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event){
 
+        LogHelper.info(("Initialization Complete!"));
     }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event){ //Wraps stuff up, runs after other mods init.
 
+        LogHelper.info(("Post-initialization Complete!"));
     }
 }
