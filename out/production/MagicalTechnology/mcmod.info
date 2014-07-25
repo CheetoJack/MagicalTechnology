@@ -1,0 +1,19 @@
+[
+{
+  "modid": "MagicalTechnology",
+  "name": "Magical Technology",
+  "description": "A fusion of magic and technology. Disclaimer: May not actually include fusion.",
+  "version": "0.0.1",
+  "mcversion": "1.7.10",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [
+    "cheetojack"
+  ],
+  "credits": "Pahimar: I learned using your stuff!",
+  "logoFile": "",
+  "screenshots": [],
+  "parent":"",
+  "dependencies": []
+}
+]
