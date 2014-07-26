@@ -17,23 +17,24 @@ public class ConfigurationHandler {
 
     public static void init(File configFile) {
         //Create the config object from given config file
-        if(configuration == null) {
+        if (configuration == null) {
             configuration = new Configuration(configFile);
+            loadConfiguration();
         }
     }
 
     @SubscribeEvent
-    public void onConfigurationChangedEvent(ConfigChangedEvent.OnConfigChangedEvent event){
-        if(event.modID.equalsIgnoreCase(Reference.MOD_ID)){
+    public void onConfigurationChangedEvent(ConfigChangedEvent.OnConfigChangedEvent event) {
+        if (event.modID.equalsIgnoreCase(Reference.MOD_ID)) {
             //Re-sync configs
 
         }
     }
 
-    public void loadConfiguration(){
+    private static void loadConfiguration() {
         testValue = configuration.getBoolean("configValue", Configuration.CATEGORY_GENERAL, false, "This is an example config value!");
 
-        if(configuration.hasChanged()){
+        if (configuration.hasChanged()) {
             configuration.save();
         }
     }
